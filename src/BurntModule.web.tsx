@@ -20,11 +20,28 @@ export default {
         `[burnt] toast() error: You need to add the <Toaster /> component to the root of your app for toasts to display on Web. There was no <Toaster /> found.`
       );
     } else {
-      toast(options.title, {
-        description: options.message,
-        icon: getIcon(options),
-        duration: (options.duration ?? 5) * 1000,
-      });
+      switch (options.preset) {
+        case "done":
+          toast.success(options.title, {
+            description: options.message,
+            icon: getIcon(options),
+            duration: (options.duration ?? 5) * 1000,
+          });
+          break;
+        case "error":
+          toast.error(options.title, {
+            description: options.message,
+            icon: getIcon(options),
+            duration: (options.duration ?? 5) * 1000,
+          });
+          break;
+        default:
+          toast(options.title, {
+            description: options.message,
+            icon: getIcon(options),
+            duration: (options.duration ?? 5) * 1000,
+          });
+      }
     }
   },
   alertAsync(options: AlertOptions) {
@@ -135,8 +152,8 @@ const XIcon = () => {
   }`,
         }}
       />
-      <line x1='18' x2='6' y1='6' y2='18'></line>
-      <line x1='6' x2='18' y1='6' y2='18'></line>
+      <line x1="18" x2="6" y1="6" y2="18"></line>
+      <line x1="6" x2="18" y1="6" y2="18"></line>
     </svg>
   );
 };
