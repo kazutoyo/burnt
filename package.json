@@ -1,5 +1,5 @@
 {
-  "name": "burnt",
+  "name": "@kazutoyo/burnt",
   "version": "0.12.0",
   "description": "Cross-platform toasts, powered by native elements.",
   "main": "build/index.js",
@@ -21,13 +21,13 @@
     "burnt",
     "Burnt"
   ],
-  "repository": "https://github.com/nandorojo/burnt",
+  "repository": "https://github.com/kazutoyo/burnt",
   "bugs": {
-    "url": "https://github.com/nandorojo/burnt/issues"
+    "url": "https://github.com/kazutoyo/burnt/issues"
   },
-  "author": "Fernando Rojo <frojo@sas.upenn.edu> (https://github.com/nandorojo)",
+  "author": "Kazutoyo Tokai <kazutoyo.jp@gmail.com> (https://github.com/kazutoyo)",
   "license": "MIT",
-  "homepage": "https://github.com/nandorojo/burnt#readme",
+  "homepage": "https://github.com/kazutoyo/burnt#readme",
   "dependencies": {
     "sf-symbols-typescript": "^1.0.0",
     "sonner": "^0.3.5"
